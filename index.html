@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculator</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="calcBox">
+      <div class="calcDisplay">
+        <div class="result">0</div>
+      </div>
+      <div class="buttons">
+        <!-- 4x rows of 3x buttons -->
+        <div class="numbers">
+          <div class="row0">
+            <button class="signBox">AC</button>
+            <button class="signBox">+/-</button>
+            <button class="signBox">%</button>
+          </div>
+          <div class="row1">
+            <button class="numberBox">7</button>
+            <button class="numberBox">8</button>
+            <button class="numberBox">9</button>
+          </div>
+          <div class="row2">
+            <button class="numberBox">4</button>
+            <button class="numberBox">5</button>
+            <button class="numberBox">6</button>
+          </div>
+          <div class="row3">
+            <button class="numberBox">1</button>
+            <button class="numberBox">2</button>
+            <button class="numberBox">3</button>
+          </div>
+          <!-- keep in mind that 0 should be size of 2x number buttons -->
+          <div class="row4">
+            <button class="numberBox double">0</button>
+            <button class="numberBox point">.</button>
+          </div>
+        </div>
+        <!-- display vertically -->
+        <div class="operators">
+          <button class="operatorBox">÷</button>
+          <button class="operatorBox">x</button>
+          <button class="operatorBox">-</button>
+          <button class="operatorBox">+</button>
+          <button class="operatorBox">=</button>
+        </div>
+      </div>
+    </div>
+    <script src="calcjs.js"></script>
+  </body>
+</html>

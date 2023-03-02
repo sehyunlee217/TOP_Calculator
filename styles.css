@@ -1,0 +1,59 @@
+body{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    min-height: 100vh;
+    min-width: 680px;
+    margin: 0px;
+    padding: 0px;
+    background-color: antiquewhite;
+    font-size: 0; /*removes spacing between buttons*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}   
+
+.calcBox{
+    border: 2px solid rgb(33, 33, 33);
+    border-radius: 4px;
+}
+
+.calcDisplay{
+    min-height: 60px;
+    max-width: 240px;
+    font-size: 50px;
+    font-weight: lighter;
+    color: aliceblue;
+    background-color: black;
+    text-align: right;
+
+    word-wrap: break-word;
+}
+
+.buttons{
+    display: flex
+}
+
+.row0>button{
+    background-color: rgb(117, 117, 117);
+}
+
+.operators{
+    display: flex;
+    flex-direction: column;
+}
+
+.operators>button{
+    background-color: orange;
+}
+
+button{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 30px;
+    border: 1px solid black;
+    margin: 0px;
+    width: 60px;
+    height: 60px;
+}
+
+.double{
+    width: 120px;
+}
