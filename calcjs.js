@@ -22,6 +22,31 @@ let roundedNum = (num) => (Math.round((num) * 100)) / 100;
 
 const operatorList = ["+", "-", "x", "÷"];
 
+// function that would remove the extra operators when two operators are placed consecutively
+
+function removeExtraOp(operationStr) {
+    let strLen = operationStr.length;
+    let strLastChar = operationStr[strLen - 1];
+    let strbeforeLastChar = operationStr[strLen - 2];
+    // if some equation as argument,
+    if (strLen > 1) {
+        // if two ("=") operators are consecutive, proceed previous calculation
+        if (strLastChar == "=" && strbeforeLastChar == "=") {
+            console.log(operationStr);
+            console.log("slice: ", operationStr.slice(0, strLen - 2));
+            console.log(operate(operationStr.slice(0, strLen - 2)));
+        }
+        // if operator + ("="), then, conduct it by itself
+        else if (operatorList.includes(strbeforeLastChar) && strLastChar == "=") {
+        }
+        // if two operators are consecutive, remove the new operator
+        else {
+            console.log("slice: ",);
+        }
+
+    }
+}
+
 // operate() takes an operator and 2 numbers and calls funciton.
 function operate(equation) {
 
@@ -152,12 +177,11 @@ function buttonClick2(e) {
     }
     // if number is clicked,
     else if (String(numList).includes(this.textContent)) {
-        console.log(operationString);
         // to remove 0 adding up in front of the calcDisplay
         if (calcDisplay == 0) {
             calcDisplay = this.textContent;
         }
-        else if (inOperation) {
+        else if (inOperation || operationString[operationString.length - 2] == "=") {
             calcDisplay = this.textContent;
             inOperation = false;
         }
@@ -167,9 +191,10 @@ function buttonClick2(e) {
     }
     // if operators are clicked, if (num)[operator1](num)[operator2] => (num)[operator1](num) takes place
     else {
+        removeExtraOp(operationString);
+
         if (this.textContent == "=") {
             calcDisplay = operate(operationString.split("=")[0]);
-            operationString = calcDisplay;
         }
         inOperation = true;
     }
